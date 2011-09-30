@@ -1,1 +1,2 @@
-# this is my asset loader
+#= require supersized
+#= require main

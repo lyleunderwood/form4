@@ -4,6 +4,9 @@
  *= require skeleton/skeleton
  *= require skeleton/layout
  *
+ * supersized
+ *= require supersized
+ *
  * site stuff
  *= require layout
  *= require theme

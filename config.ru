@@ -1,13 +1,15 @@
 require 'sprockets'
 
-project_root = File.expand_path(File.dirname(__FILE__))
+project_root = File.join(File.expand_path(File.dirname(__FILE__)), 'lib')
 assets = Sprockets::Environment.new(project_root) do |env|
   env.logger = Logger.new(STDOUT)
 end
 
-assets.append_path(File.join(project_root, 'lib', 'assets'))
-assets.append_path(File.join(project_root, 'lib', 'assets', 'javascripts'))
-assets.append_path(File.join(project_root, 'lib', 'assets', 'stylesheets'))
+assets.append_path(File.join(project_root, 'assets'))
+assets.append_path(File.join(project_root, 'assets', 'javascripts'))
+assets.append_path(File.join(project_root, 'assets', 'stylesheets'))
+
+use Rack::Static, :urls => ['/images'], :root => File.join(project_root, 'public')
 
 app = lambda do |env|
   [
