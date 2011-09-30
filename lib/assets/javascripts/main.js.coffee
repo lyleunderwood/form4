@@ -16,8 +16,8 @@ $ ->
 
   load_content = (hash) ->
     target_slide = null
-    if hash.length > 0
-      target_slide = hash + '_slide'
+
+    target_slide = hash if hash.length > 0
 
     sections = $('#sections .section')
     sections.hide()
@@ -25,16 +25,17 @@ $ ->
     if target_slide
       $('#' + target_slide).show()
 
-
-    console.log(hash, target_slide, sections)
-
   link_navigate = (e) ->
     url = $(this).attr 'href'
-    url = url.replace(/^.*#/, '')
+    url = url.replace(/^.*##?/, '')
+    url = '' if url == 'home'
     $.history.load url
 
     false
 
-  $.history.init load_content
+  setup_history = ->
+    $.history.init load_content
 
-  $('#navigation a, .home_link').not('external-link').click link_navigate
+    $('#navigation a, .home_link').not('external-link').click link_navigate
+
+  setup_history() unless screen.width < 768
