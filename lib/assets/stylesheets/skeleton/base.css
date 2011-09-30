@@ -52,9 +52,9 @@
 /* #Basic Styles
 ================================================== */
 	body {
-		background: #fff;
+		background: #000;
 		font: 14px/21px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-		color: #444;
+		color: #FFF;
 		-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
 		-webkit-text-size-adjust: 100%;
  }
@@ -63,7 +63,7 @@
 /* #Typography
 ================================================== */
 	h1, h2, h3, h4, h5, h6 {
-		color: #181818;
+		color: #FFF;
 		font-family: "Georgia", "Times New Roman", Helvetica, Arial, sans-serif;
 		font-weight: normal; }
 	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
@@ -73,14 +73,14 @@
 	h4 { font-size: 21px; line-height: 30px; margin-bottom: 4px; }
 	h5 { font-size: 17px; line-height: 24px; }
 	h6 { font-size: 14px; line-height: 21px; }
-	.subheader { color: #777; }
+	.subheader { color: #FFF; }
 
 	p { margin: 0 0 20px 0; }
 	p img { margin: 0; }
-	p.lead { font-size: 21px; line-height: 27px; color: #777;  }
+	p.lead { font-size: 21px; line-height: 27px; color: #FFF;  }
 
 	em { font-style: italic; }
-	strong { font-weight: bold; color: #333; }
+	strong { font-weight: bold; color: #FFF; }
 	small { font-size: 80%; }
 
 /*	Blockquotes  */
@@ -95,8 +95,8 @@
 
 /* #Links
 ================================================== */
-	a, a:visited { color: #333; text-decoration: underline; outline: 0; }
-	a:hover, a:focus { color: #000; }
+	a, a:visited { color: #FFF; text-decoration: underline; outline: 0; }
+	a:hover, a:focus { color: #FFF; }
 	p a, p a:visited { line-height: inherit; }
 
 

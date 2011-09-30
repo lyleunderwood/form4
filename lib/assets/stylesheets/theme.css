@@ -1,10 +1,14 @@
+html {
+  color : white;
+}
+
 .content_box {
-  background-color : rgba(0, 0, 0, 0.5);
+  background-color : rgba(0, 0, 0, 0.7);
   padding          : 1em;
 }
 
 #sections .padding {
-  background-color : rgba(0, 0, 0, 0.5);
+  background-color : rgba(0, 0, 0, 0.7);
 }
 
 #sections .content_box {

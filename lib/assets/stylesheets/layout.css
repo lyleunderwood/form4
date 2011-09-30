@@ -8,6 +8,10 @@ h1, h2 {
   margin : 1em;
 }
 
+#sections .section {
+  display : none;
+}
+
 #sections .actions {
   display : table;
 }
