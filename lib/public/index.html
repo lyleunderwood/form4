@@ -1,69 +1,113 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
   <head>
+
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta charset="utf-8">
     <title>Form 4</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
     <script type="text/javascript" src="/assets/javascripts/application.js"></script>
     <link rel="stylesheet" href="/assets/stylesheets/application.css"></script>
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="stylesheets/base.css">
+    <link rel="stylesheet" href="stylesheets/skeleton.css">
+    <link rel="stylesheet" href="stylesheets/layout.css">
+
+    <!-- Favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+
   </head>
+
   <body>
-    <h1 id="title">Form 4</h1>
 
-    <ul id="navigation">
-      <li>
-        <a href="#">Home</a>
-      </li>
-      <li>
-        <a href="#">Profile</a>
-      </li>
-      <li>
-        <a href="#">Publications</a>
-      </li>
-      <li>
-        <a href="#">Contact</a>
-      </li>
-    </ul>
+    <div class="container">
+      <nav class="three columns sidebar">
+        <h1 id="title">Form 4</h1>
 
-    <div id="job_info">
-      <h2 class="name">Netflix Headquarters Los Altos, CA</h2>
-      <div class="info">
-        <p class="field">
-          <span class="label completed">Completed: </span>
-          <span class="value completed">2007</span>
-        </p>
-        <p class="field">
-          <span class="value class">Commercial TI</span>
-        </p>
-        <p class="field">
-          <span class="value area">50,000 square feet</span>
-        </p>
-      </div>
-    </div>
+        <ul id="navigation">
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <a href="#">Profile</a>
+          </li>
+          <li>
+            <a href="#">Publications</a>
+          </li>
+          <li>
+            <a href="#">Contact</a>
+          </li>
+        </ul>
 
-    <ul id="sections">
-      <li id="profile">
-        <a href="#" class="home_link">Home</a>
-
-        <div class="content">
-          profile
+        <div id="job_info">
+          <h2 class="name">Netflix Headquarters Los Altos, CA</h2>
+          <div class="info">
+            <p class="field">
+              <span class="label completed">Completed: </span>
+              <span class="value completed">2007</span>
+            </p>
+            <p class="field">
+              <span class="value class">Commercial TI</span>
+            </p>
+            <p class="field">
+              <span class="value area">50,000 square feet</span>
+            </p>
+          </div>
         </div>
-      </li>
+      </nav>
 
-      <li id="publications">
-        <a href="#" class="home_link">Home</a>
+      <ul id="sections" class="ten columns">
+        <li id="profile">
+          <a href="#" class="home_link">Home</a>
 
-        <div class="content">
-          profile
-        </div>
-      </li>
+          <div class="content">
+            profile
+          </div>
+        </li>
 
-      <li id="contact">
-        <a href="#" class="home_link">Home</a>
+        <li id="publications">
+          <a href="#" class="home_link">Home</a>
 
-        <div class="content">
-          contact
-        </div>
-      </li>
-    </ul>
+          <div class="content">
+            profile
+          </div>
+        </li>
 
+        <li id="contact">
+          <a href="#" class="home_link">Home</a>
+
+          <div class="content">
+            contact
+          </div>
+        </li>
+      </ul>
+
+    </container>
+
+    <!-- JS
+    ================================================== -->
+    <script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+
+  <!-- End Document
+  ================================================== -->
   </body>
 </html>
