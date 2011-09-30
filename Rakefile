@@ -11,6 +11,7 @@ LOGGER      = Logger.new(STDOUT)
 BUNDLES     = %w( application.css application.js )
 BUILD_DIR   = ROOT.join("build")
 SOURCE_DIR  = ROOT.join("lib", "assets")
+ASSET_DIR   = "assets"
 
 task :cleanup do
   FileUtils.rm_r BUILD_DIR if File.exists? BUILD_DIR
@@ -27,13 +28,18 @@ task :compile => :cleanup do
   BUNDLES.each do |bundle|
     assets = sprockets.find_asset(bundle)
     prefix, basename = assets.pathname.to_s.split('/')[-2..-1]
-    FileUtils.mkpath BUILD_DIR.join(prefix)
+    p prefix, basename
+    FileUtils.mkpath BUILD_DIR.join(ASSET_DIR, prefix)
 
-    assets.write_to(BUILD_DIR.join(prefix, basename))
+    assets.write_to(BUILD_DIR.join(ASSET_DIR, prefix, basename))
     assets.to_a.each do |asset|
       # strip filename.css.foo.bar.css multiple extensions
       realname = asset.pathname.basename.to_s.split(".")[0..1].join(".")
-      asset.write_to(BUILD_DIR.join(prefix, realname))
+      asset.write_to(BUILD_DIR.join(ASSET_DIR, prefix, realname))
     end
+  end
+
+  Dir.glob(ROOT.join('lib', 'public', '*')) do |path|
+    FileUtils.cp_r(path, BUILD_DIR)
   end
 end
