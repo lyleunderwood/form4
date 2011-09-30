@@ -1,0 +1,29 @@
+h1, h2 {
+  font-size   : 1.2em;
+  padding     : 0;
+  line-height : 1em;
+}
+
+.container.main {
+  margin : 1em;
+}
+
+#sections .actions {
+  display : table;
+}
+
+#sections .home_link {
+  display : block;
+  width   : 1em;
+  overflow : hidden;
+}
+
+#sections .right_cell {
+  display : table-cell;
+}
+
+#sections .padding {
+  display  : table-cell;
+  height   : 1em;
+  width    : 100%;
+}

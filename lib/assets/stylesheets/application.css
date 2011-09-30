@@ -1,5 +1,10 @@
 /*
+ * skeleton stuff
  *= require skeleton/base
  *= require skeleton/skeleton
  *= require skeleton/layout
+ *
+ * site stuff
+ *= require layout
+ *= require theme
  */

@@ -1,0 +1,12 @@
+.content_box {
+  background-color : rgba(0, 0, 0, 0.5);
+  padding          : 1em;
+}
+
+#sections .padding {
+  background-color : rgba(0, 0, 0, 0.5);
+}
+
+#sections .content_box {
+  padding-top : 0;
+}
