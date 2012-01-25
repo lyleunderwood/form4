@@ -28,7 +28,6 @@ task :compile => :cleanup do
   BUNDLES.each do |bundle|
     assets = sprockets.find_asset(bundle)
     prefix, basename = assets.pathname.to_s.split('/')[-2..-1]
-    p prefix, basename
     FileUtils.mkpath BUILD_DIR.join(ASSET_DIR, prefix)
 
     assets.write_to(BUILD_DIR.join(ASSET_DIR, prefix, basename))
@@ -42,4 +41,10 @@ task :compile => :cleanup do
   Dir.glob(ROOT.join('lib', 'public', '*')) do |path|
     FileUtils.cp_r(path, BUILD_DIR)
   end
+end
+
+task :package => :compile do
+  `tar cvzf build.tar.gz build`
+  raise 'Package creation failed' unless File.exists?('build.tar.gz')
+  FileUtils.mv('build.tar.gz', 'build')
 end
